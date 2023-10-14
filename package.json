@@ -1,7 +1,7 @@
 {
   "name": "@liquid-labs/catalyst-builder-github-workflows-node-unit-test",
   "version": "1.0.0-alpha.0",
-  "description": "",
+  "description": "A catalyst plugin for GitHub Workflows CI/CD unit testing.",
   "main": "dist/catalyst-builder-github-workflows-node-unit-test.js",
   "files": [
     "dist/"

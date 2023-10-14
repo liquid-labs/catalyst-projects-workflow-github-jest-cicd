@@ -64,3 +64,16 @@ workflows:
       config:
         noDevInstall: true
         noDoc: true
+badges:
+  coverage:
+    dependencies: []
+    artifacts:
+      - builder: '@liquid-labs/catalyst-builder-badge-coverage'
+        version: 1.0.0-alpha.0
+        priority: 0
+        content: >-
+          [![coverage:
+          94%](./.readme-assets/coverage.svg)](https://github.com/liquid-labs/catalyst-builder-github-workflows-node-unit-test/pulls?q=is%3Apr+is%3Aclosed)
+        path: >-
+          /Users/zane/.liq/playground/liquid-labs/catalyst-builder-github-workflows-node-unit-test/.readme-assets/coverage.svg
+        purpose: Test coverage badge for README.md.
