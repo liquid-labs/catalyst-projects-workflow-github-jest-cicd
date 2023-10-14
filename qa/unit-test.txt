@@ -1,0 +1,18 @@
+Test git rev: 3bcf9527540b7e5299fee67c590a8399c4460067
+PASS handlers/workflows/github/node-unit-test/test/add.test.js
+PASS handlers/workflows/github/node-unit-test/test/remove.test.js
+PASS handlers/workflows/github/node-unit-test/test/show.test.js
+------------|---------|----------|---------|---------|-------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------|---------|----------|---------|---------|-------------------
+All files   |   94.38 |     90.9 |     100 |   93.97 |                   
+ add.mjs    |     100 |      100 |     100 |     100 |                   
+ remove.mjs |      92 |     87.5 |     100 |    91.3 | 34-35             
+ show.mjs   |   86.95 |    77.77 |     100 |   85.71 | 33-37             
+------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        2.222 s, estimated 3 s
+Ran all test suites.

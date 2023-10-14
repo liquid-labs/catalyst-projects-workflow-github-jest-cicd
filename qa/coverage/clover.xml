@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1697248383587" clover="3.2.0">
+  <project timestamp="1697248383587" name="All files">
+    <metrics statements="83" coveredstatements="78" conditionals="33" coveredconditionals="30" methods="9" coveredmethods="9" elements="125" coveredelements="117" complexity="0" loc="83" ncloc="83" packages="1" files="3" classes="3"/>
+    <file name="add.mjs" path="/Users/zane/.liq/playground/liquid-labs/catalyst-builder-github-workflows-node-unit-test/src/handlers/workflows/github/node-unit-test/add.mjs">
+      <metrics statements="39" coveredstatements="39" conditionals="16" coveredconditionals="16" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="216" type="cond" truecount="6" falsecount="0"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="45" count="3" type="stmt"/>
+      <line num="46" count="3" type="stmt"/>
+      <line num="53" count="3" type="stmt"/>
+      <line num="55" count="3" type="cond" truecount="3" falsecount="0"/>
+      <line num="56" count="1" type="stmt"/>
+      <line num="59" count="2" type="stmt"/>
+      <line num="60" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="65" count="1" type="stmt"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="69" count="1" type="stmt"/>
+      <line num="72" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="73" count="1" type="stmt"/>
+      <line num="76" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="77" count="1" type="stmt"/>
+      <line num="80" count="1" type="stmt"/>
+      <line num="102" count="1" type="stmt"/>
+      <line num="103" count="1" type="stmt"/>
+      <line num="105" count="1" type="stmt"/>
+      <line num="106" count="1" type="stmt"/>
+      <line num="108" count="1" type="stmt"/>
+      <line num="122" count="1" type="stmt"/>
+      <line num="124" count="1" type="stmt"/>
+      <line num="126" count="1" type="stmt"/>
+      <line num="127" count="1" type="stmt"/>
+    </file>
+    <file name="remove.mjs" path="/Users/zane/.liq/playground/liquid-labs/catalyst-builder-github-workflows-node-unit-test/src/handlers/workflows/github/node-unit-test/remove.mjs">
+      <metrics statements="23" coveredstatements="21" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="216" type="cond" truecount="6" falsecount="0"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="20" count="2" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="23" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+    </file>
+    <file name="show.mjs" path="/Users/zane/.liq/playground/liquid-labs/catalyst-builder-github-workflows-node-unit-test/src/handlers/workflows/github/node-unit-test/show.mjs">
+      <metrics statements="21" coveredstatements="18" conditionals="9" coveredconditionals="7" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="216" type="cond" truecount="6" falsecount="0"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="22" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
