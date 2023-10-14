@@ -106,7 +106,7 @@ on:\n`
   await fs.writeFile(absWorkflowPath, contents)
 
   const data = {
-    scripts : [
+    artifacts : [
       {
         builder : myName,
         version : myVersion,

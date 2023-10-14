@@ -1,7 +1,7 @@
 workflows:
   github:
     node-unit-test:
-      scripts:
+      artifacts:
         - builder: '@liquid-labs/catalyst-builder-github-workflows-node-unit-test'
           version: 1.0.0-alpha.0
           path: .github/workflows/unit-tests-node.yaml
