@@ -30,9 +30,9 @@ describe('PUT:/workflows/github/node-unit-test/add', () => {
   })
 
   test('returns data pointing to the script', () => {
-    const { scripts } = body
-    expect(scripts).toHaveLength(1)
-    expect(scripts[0].path).toBe('.github/workflows/unit-tests-node.yaml')
+    const { artifacts } = body
+    expect(artifacts).toHaveLength(1)
+    expect(artifacts[0].path).toBe('.github/workflows/unit-tests-node.yaml')
   })
 
   test('creates the script in the expected location', async() => {
