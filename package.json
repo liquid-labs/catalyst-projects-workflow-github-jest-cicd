@@ -1,8 +1,8 @@
 {
-  "name": "@liquid-labs/catalyst-builder-github-workflows-node-unit-test",
+  "name": "@liquid-labs/catalyst-builder-workflow-github-jest-unit-test",
   "version": "1.0.0-alpha.0",
   "description": "A catalyst plugin for GitHub Workflows CI/CD unit testing.",
-  "main": "dist/catalyst-builder-github-workflows-node-unit-test.js",
+  "main": "dist/catalyst-builder-workflow-github-jest-unit-test.js",
   "files": [
     "dist/"
   ],
@@ -21,16 +21,19 @@
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",
-  "repository": "git+ssh://git@github.com/liquid-labs/catalyst-builder-github-workflows-node-unit-test.git",
-  "bugs": {
-    "url": "https://github.com/liquid-labs/catalyst-builder-github-workflows-node-unit-test/issues"
+  "repository": {
+    "url": "git+ssh://git@github.com/liquid-labs/catalyst-builder-workflow-github-jest-unit-test.git",
+    "type": "git"
   },
-  "homepage": "https://github.com/liquid-labs/catalyst-builder-github-workflows-node-unit-test#readme",
+  "bugs": {
+    "url": "https://github.com/liquid-labs/catalyst-builder-workflow-github-jest-unit-test/issues"
+  },
+  "homepage": "https://github.com/liquid-labs/catalyst-builder-workflow-github-jest-unit-test#readme",
   "devDependencies": {
     "@liquid-labs/catalyst-resource-babel-and-rollup": "^1.0.0-alpha.3",
     "@liquid-labs/catalyst-resource-eslint": "^1.0.0-alpha.1",
     "@liquid-labs/catalyst-resource-jest": "^1.0.0-alpha.3",
-    "@liquid-labs/catalyst-server": "^1.0.0-alpha.2"
+    "@liquid-labs/catalyst-server": "file:.yalc/@liquid-labs/catalyst-server"
   },
   "dependencies": {
     "@liquid-labs/catalyst-lib-build": "^1.0.0-alpha.6",
