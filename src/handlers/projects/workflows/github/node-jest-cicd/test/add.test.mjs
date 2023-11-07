@@ -8,7 +8,7 @@ import * as addHandler from '../add'
 
 const testPkgPath = fsPath.join(__dirname, 'data', 'pkgA')
 
-describe('PUT:/workflows/github/node-unit-test/add', () => {
+describe('PUT:/projects/workflows/github/node-jest-cicd/add', () => {
   const reporter = new Reporter({ silent : true })
   let body
 
