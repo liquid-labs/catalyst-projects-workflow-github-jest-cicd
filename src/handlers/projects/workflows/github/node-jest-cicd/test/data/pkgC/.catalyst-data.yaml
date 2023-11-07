@@ -1,0 +1,10 @@
+projects:
+  workflows:
+    github:
+      node-jest-cicd:
+        artifacts:
+          - builder: '@liquid-labs/catalyst-projects-workflow-github-jest-cicd'
+            version: 1.0.0-alpha.0
+            path: .github/workflows/unit-tests-node.yaml
+            purpose: Runs node unit test CI/CD using a GitHub Workflow.
+            config: {}

@@ -11,7 +11,7 @@ import * as removeHandler from '../remove'
 
 const testPkgPath = fsPath.join(__dirname, 'data', 'pkgC')
 
-describe('PUT:/workflows/github/node-unit-test/remove', () => {
+describe('PUT:/projects/workflows/github/node-jest-cicd/remove', () => {
   const reporter = new Reporter({ silent : true })
 
   const mockReq = {

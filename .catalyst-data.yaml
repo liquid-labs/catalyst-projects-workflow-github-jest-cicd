@@ -40,9 +40,9 @@ workflows:
         - builder: '@liquid-labs/catalyst-builder-workflow-local-make-node'
           version: 1.0.0-alpha.0
           priority: 50
-          path: make/50-catalyst-builder-workflow-github-jest-unit-test-js.mk
+          path: make/50-catalyst-projects-workflow-github-jest-cicd-js.mk
           purpose: >-
-            Builds the 'dist/catalyst-builder-workflow-github-jest-unit-test.js'
+            Builds the 'dist/catalyst-projects-workflow-github-jest-cicd.js'
             artifact.
         - builder: '@liquid-labs/catalyst-builder-workflow-local-make-node'
           version: 1.0.0-alpha.0
@@ -73,7 +73,7 @@ badges:
         priority: 0
         content: >-
           [![coverage:
-          94%](./.readme-assets/coverage.svg)](https://github.com/liquid-labs/catalyst-builder-workflow-github-jest-unit-test/pulls?q=is%3Apr+is%3Aclosed)
+          94%](./.readme-assets/coverage.svg)](https://github.com/liquid-labs/catalyst-projects-workflow-github-jest-cicd/pulls?q=is%3Apr+is%3Aclosed)
         path: >-
-          /Users/zane/.liq/playground/liquid-labs/catalyst-builder-workflow-github-jest-unit-test/.readme-assets/coverage.svg
+          /Users/zane/.liq/playground/liquid-labs/catalyst-projects-workflow-github-jest-cicd/.readme-assets/coverage.svg
         purpose: Test coverage badge for README.md.

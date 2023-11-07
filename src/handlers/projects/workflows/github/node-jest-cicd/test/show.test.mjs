@@ -7,7 +7,7 @@ import * as showHandler from '../show'
 
 const testPkgPath = fsPath.join(__dirname, 'data', 'pkgD')
 
-describe('GET:/workflows/github/node-unit-test/show', () => {
+describe('GET:/projects/workflows/github/node-jest-cicd/show', () => {
   let body
   const reporter = new Reporter({ silent : true })
 
