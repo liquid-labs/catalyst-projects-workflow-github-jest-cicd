@@ -3,10 +3,10 @@
 # local-make-node for further details
 
 #####
-# build dist/catalyst-builder-workflow-github-jest-unit-test.js
+# build dist/catalyst-projects-workflow-github-jest-cicd.js
 #####
 
-CATALYST_CATALYST_BUILDER_WORKFLOW_GITHUB_JEST_UNIT_TEST_JS:=$(DIST)/catalyst-builder-workflow-github-jest-unit-test.js
+CATALYST_CATALYST_BUILDER_WORKFLOW_GITHUB_JEST_UNIT_TEST_JS:=$(DIST)/catalyst-projects-workflow-github-jest-cicd.js
 CATALYST_CATALYST_BUILDER_WORKFLOW_GITHUB_JEST_UNIT_TEST_JS_ENTRY=$(SRC)/index.mjs
 BUILD_TARGETS+=$(CATALYST_CATALYST_BUILDER_WORKFLOW_GITHUB_JEST_UNIT_TEST_JS)
 
@@ -16,5 +16,5 @@ $(CATALYST_CATALYST_BUILDER_WORKFLOW_GITHUB_JEST_UNIT_TEST_JS): package.json $(C
 	  $(CATALYST_ROLLUP) --config $(CATALYST_ROLLUP_CONFIG)
 
 #####
-# end dist/catalyst-builder-workflow-github-jest-unit-test.js
+# end dist/catalyst-projects-workflow-github-jest-cicd.js
 #####

@@ -15,7 +15,7 @@ const help = {
 }
 
 const method = 'put'
-const path = ['workflows', 'github', 'node-unit-test', 'add']
+const path = ['projects', 'workflows', 'github', 'node-jest-cicd', 'add']
 const parameters = [
   {
     name       : 'nodeVersions',

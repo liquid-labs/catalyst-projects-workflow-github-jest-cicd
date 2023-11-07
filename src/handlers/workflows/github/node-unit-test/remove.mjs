@@ -13,7 +13,7 @@ const help = {
 }
 
 const method = 'put'
-const path = ['workflows', 'github', 'node-unit-test', 'remove']
+const path = ['projects', 'workflows', 'github', 'node-jest-cicd', 'remove']
 const parameters = []
 
 const func = ({ app, reporter }) => async(req, res) => {
