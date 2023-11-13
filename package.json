@@ -1,6 +1,6 @@
 {
   "name": "@liquid-labs/catalyst-projects-workflow-github-jest-cicd",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "A catalyst plugin for GitHub Workflows CI/CD unit testing.",
   "main": "dist/catalyst-projects-workflow-github-jest-cicd.js",
   "files": [
