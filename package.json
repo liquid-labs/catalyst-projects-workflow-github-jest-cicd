@@ -1,8 +1,8 @@
 {
-  "name": "@liquid-labs/sdlc-projects-workflow-github-cicd",
+  "name": "@liquid-labs/sdlc-projects-workflow-github-node-jest-cicd",
   "version": "1.0.0-alpha.1",
   "description": "A plugable-express plugin for GitHub Workflows CI/CD unit testing for node and jest.",
-  "main": "dist/sdlc-projects-workflow-github-cicd.js",
+  "main": "dist/sdlc-projects-workflow-github-node-jest-cicd.js",
   "files": [
     "dist/"
   ],
@@ -22,13 +22,13 @@
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",
   "repository": {
-    "url": "git+ssh://git@github.com/liquid-labs/sdlc-projects-workflow-github-cicd.git",
+    "url": "git+ssh://git@github.com/liquid-labs/sdlc-projects-workflow-github-node-jest-cicd.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/liquid-labs/sdlc-projects-workflow-github-cicd/issues"
+    "url": "https://github.com/liquid-labs/sdlc-projects-workflow-github-node-jest-cicd/issues"
   },
-  "homepage": "https://github.com/liquid-labs/sdlc-projects-workflow-github-cicd#readme",
+  "homepage": "https://github.com/liquid-labs/sdlc-projects-workflow-github-node-jest-cicd#readme",
   "devDependencies": {
     "@liquid-labs/sdlc-resource-babel-and-rollup": "^1.0.0-alpha.5",
     "@liquid-labs/sdlc-resource-eslint": "^1.0.0-alpha.2",

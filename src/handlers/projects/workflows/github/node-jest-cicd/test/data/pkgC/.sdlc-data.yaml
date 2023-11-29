@@ -3,7 +3,7 @@ projects:
     github:
       node-jest-cicd:
         artifacts:
-          - builder: '@liquid-labs/sdlc-projects-workflow-github-cicd'
+          - builder: '@liquid-labs/sdlc-projects-workflow-github-node-jest-cicd'
             version: 1.0.0-alpha.0
             path: .github/workflows/unit-tests-node.yaml
             purpose: Runs node unit test CI/CD using a GitHub Workflow.
