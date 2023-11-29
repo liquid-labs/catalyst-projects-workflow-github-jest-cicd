@@ -1,0 +1,18 @@
+Test git rev: ab76f22d0159d3a7e1e2aef4903fb84e4b25b821
+PASS handlers/projects/workflows/github/node-jest-cicd/test/add.test.js
+PASS handlers/projects/workflows/github/node-jest-cicd/test/remove.test.js
+PASS handlers/projects/workflows/github/node-jest-cicd/test/show.test.js
+------------|---------|----------|---------|---------|-------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------|---------|----------|---------|---------|-------------------
+All files   |   94.38 |     90.9 |     100 |   93.97 |                   
+ add.mjs    |     100 |      100 |     100 |     100 |                   
+ remove.mjs |      92 |     87.5 |     100 |    91.3 | 34-35             
+ show.mjs   |   86.95 |    77.77 |     100 |   85.71 | 33-37             
+------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        1.146 s, estimated 2 s
+Ran all test suites.
