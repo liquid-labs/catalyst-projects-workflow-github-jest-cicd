@@ -3,8 +3,8 @@ import * as fs from 'node:fs/promises'
 
 import createError from 'http-errors'
 
-import { removeBuilderConfig } from '@liquid-labs/catalyst-lib-build'
 import { httpSmartResponse } from '@liquid-labs/http-smart-response'
+import { removeBuilderConfig } from '@liquid-labs/sdlc-lib-build'
 
 const help = {
   name        : 'Remove GitHub workflow Node unit test',

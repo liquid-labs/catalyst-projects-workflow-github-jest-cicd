@@ -3,10 +3,10 @@ import * as fs from 'node:fs/promises'
 
 import createError from 'http-errors'
 
-import { saveBuilderConfig } from '@liquid-labs/catalyst-lib-build'
 import { determineOriginAndMain } from '@liquid-labs/git-toolkit'
 import { httpSmartResponse } from '@liquid-labs/http-smart-response'
 import { getPackageJSON } from '@liquid-labs/npm-toolkit'
+import { processBuilderResults } from '@liquid-labs/sdlc-lib-build'
 
 const help = {
   name        : 'Add GitHub workflow Node unit test',
@@ -42,7 +42,7 @@ const parameters = [
 const defaultNodeVersions = ['18.x', '19.x', '20.x']
 const defaultOsList = ['ubuntu-latest', 'windows-latest', 'macos-latest']
 
-const func = ({ reporter }) => async(req, res) => {
+const func = ({ app, reporter }) => async(req, res) => {
   reporter.isolate()
 
   const {
@@ -119,7 +119,7 @@ on:\n`
     ]
   }
 
-  await saveBuilderConfig({ config : data, path, pkgRoot : cwd })
+  await processBuilderResults({ app, path, pkgRoot : cwd, reporter, results : data, ...req.vars })
 
   const msg = 'Created 1 workflow.'
 

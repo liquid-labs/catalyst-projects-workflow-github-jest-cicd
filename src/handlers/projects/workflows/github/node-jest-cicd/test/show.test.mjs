@@ -1,15 +1,13 @@
 /* global beforeAll describe expect fail test */
 import * as fsPath from 'node:path'
 
-import { Reporter } from '@liquid-labs/catalyst-server'
-
 import * as showHandler from '../show'
 
 const testPkgPath = fsPath.join(__dirname, 'data', 'pkgD')
 
 describe('GET:/projects/workflows/github/node-jest-cicd/show', () => {
   let body
-  const reporter = new Reporter({ silent : true })
+  const reporterMock = { isolate : () => {}, log : () => {}, push : () => {} }
 
   const mockReq = {
     accepts : () => 'text/plain',
@@ -24,7 +22,7 @@ describe('GET:/projects/workflows/github/node-jest-cicd/show', () => {
   }
 
   beforeAll(async() => {
-    const handler = showHandler.func({ reporter })
+    const handler = showHandler.func({ reporter : reporterMock })
     await handler(mockReq, mockRes)
   })
 
@@ -34,7 +32,7 @@ describe('GET:/projects/workflows/github/node-jest-cicd/show', () => {
 
   test("lack of a 'X-CWD' header results in an exception", async() => {
     const exceptReq = Object.assign({}, mockReq, { get : () => undefined })
-    const handler = showHandler.func({ reporter })
+    const handler = showHandler.func({ reporter : reporterMock })
     try {
       await handler(exceptReq, mockRes)
       fail('failed to throw')
