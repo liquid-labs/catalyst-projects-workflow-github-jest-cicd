@@ -1,6 +1,6 @@
 {
   "name": "@liquid-labs/sdlc-projects-workflow-github-node-jest-cicd",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "A plugable-express plugin for GitHub Workflows CI/CD unit testing for node and jest.",
   "main": "dist/sdlc-projects-workflow-github-node-jest-cicd.js",
   "files": [
