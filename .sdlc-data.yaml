@@ -41,8 +41,10 @@ projects:
           - builder: '@liquid-labs/sdlc-projects-workflow-local-node-build'
             version: 1.0.0-alpha.5
             priority: 50
-            path: make/50-sdlc-projects-workflow-github-cicd-js.mk
-            purpose: Builds the 'dist/sdlc-projects-workflow-github-cicd.js' artifact.
+            path: make/50-sdlc-projects-workflow-github-node-jest-cicd-js.mk
+            purpose: >-
+              Builds the 'dist/sdlc-projects-workflow-github-node-jest-cicd.js'
+              artifact.
           - builder: '@liquid-labs/sdlc-projects-workflow-local-node-build'
             version: 1.0.0-alpha.5
             priority: 55
@@ -64,13 +66,4 @@ projects:
   badges:
     coverage:
       dependencies: []
-      artifacts:
-        - builder: '@liquid-labs/sdlc-projects-badges-coverage'
-          version: 1.0.0-alpha.2
-          priority: 0
-          content: >-
-            [![coverage:
-            94%](./.readme-assets/coverage.svg)](https://github.com/liquid-labs/sdlc-projects-workflow-github-cicd/pulls?q=is%3Apr+is%3Aclosed)
-          path: >-
-            /Users/zane/playground/liquid-labs/sdlc-projects-workflow-github-cicd/.readme-assets/coverage.svg
-          purpose: Test coverage badge for README.md.
+      artifacts: []
