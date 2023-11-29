@@ -10,7 +10,7 @@ import * as removeHandler from '../remove'
 const testPkgPath = fsPath.join(__dirname, 'data', 'pkgC')
 
 describe('PUT:/projects/workflows/github/node-jest-cicd/remove', () => {
-  const reporterMock = { isolate: () => {}, log: () => {}, push : () => {} }
+  const reporterMock = { isolate : () => {}, log : () => {}, push : () => {} }
 
   const mockReq = {
     accepts : () => 'application/json',
@@ -25,7 +25,7 @@ describe('PUT:/projects/workflows/github/node-jest-cicd/remove', () => {
   }
 
   beforeAll(async() => {
-    const handler = removeHandler.func({ reporter: reporterMock })
+    const handler = removeHandler.func({ reporter : reporterMock })
     await handler(mockReq, mockRes)
   })
 
@@ -42,7 +42,7 @@ describe('PUT:/projects/workflows/github/node-jest-cicd/remove', () => {
 
   test("lack of a 'X-CWD' header results in an exception", async() => {
     const exceptReq = Object.assign({}, mockReq, { get : () => undefined })
-    const handler = removeHandler.func({ reporter: reporterMock })
+    const handler = removeHandler.func({ reporter : reporterMock })
     try {
       await handler(exceptReq, mockRes)
       fail('failed to throw')

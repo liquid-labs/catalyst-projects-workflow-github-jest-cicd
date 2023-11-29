@@ -7,7 +7,7 @@ const testPkgPath = fsPath.join(__dirname, 'data', 'pkgD')
 
 describe('GET:/projects/workflows/github/node-jest-cicd/show', () => {
   let body
-  const reporterMock = { isolate: () => {}, log: () => {}, push : () => {} }
+  const reporterMock = { isolate : () => {}, log : () => {}, push : () => {} }
 
   const mockReq = {
     accepts : () => 'text/plain',
@@ -22,7 +22,7 @@ describe('GET:/projects/workflows/github/node-jest-cicd/show', () => {
   }
 
   beforeAll(async() => {
-    const handler = showHandler.func({ reporter: reporterMock })
+    const handler = showHandler.func({ reporter : reporterMock })
     await handler(mockReq, mockRes)
   })
 

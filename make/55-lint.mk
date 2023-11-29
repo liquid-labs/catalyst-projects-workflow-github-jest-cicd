@@ -13,7 +13,7 @@ PRECIOUS_TARGETS+=$(SDLC_LINT_REPORT)
 
 LINT_IGNORE_PATTERNS:=--ignore-pattern '$(DIST)/**/*'\
 --ignore-pattern '$(TEST_STAGING)/**/*'\
---ignore-pattern '$(DOCS)/**/*'
+--ignore-pattern '$(DOC)/**/*'
 
 $(SDLC_LINT_REPORT) $(SDLC_LINT_PASS_MARKER): $(SDLC_ALL_JS_FILES_SRC)
 	mkdir -p $(dir $@)
