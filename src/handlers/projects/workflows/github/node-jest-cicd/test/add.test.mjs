@@ -2,15 +2,14 @@
 import { existsSync } from 'node:fs'
 import * as fsPath from 'node:path'
 
-import { Reporter } from '@liquid-labs/catalyst-server'
-
 import * as addHandler from '../add'
 
 const testPkgPath = fsPath.join(__dirname, 'data', 'pkgA')
 
 describe('PUT:/projects/workflows/github/node-jest-cicd/add', () => {
-  const reporter = new Reporter({ silent : true })
   let body
+
+  const appMock = {}
 
   const mockReq = {
     accepts : () => 'application/json',
@@ -24,8 +23,10 @@ describe('PUT:/projects/workflows/github/node-jest-cicd/add', () => {
     end   : () => {}
   }
 
+  const reporterMock = { isolate: () => {}, log: () => {}, push : () => {} }
+
   beforeAll(async() => {
-    const handler = addHandler.func({ reporter })
+    const handler = addHandler.func({ app: appMock, reporter: reporterMock })
     await handler(mockReq, mockRes)
   })
 
@@ -40,14 +41,14 @@ describe('PUT:/projects/workflows/github/node-jest-cicd/add', () => {
     expect(existsSync(scriptPath)).toBe(true)
   })
 
-  test("saves '.catalyst-data.yaml'", () => {
-    const catalystDataPath = fsPath.join(testPkgPath, '.catalyst-data.yaml')
-    expect(existsSync(catalystDataPath)).toBe(true)
+  test("saves '.sdlc-data.yaml'", () => {
+    const sdlcDataPath = fsPath.join(testPkgPath, '.sdlc-data.yaml')
+    expect(existsSync(sdlcDataPath)).toBe(true)
   })
 
   test("setting both 'noPush' and 'noPullRequest' results in an exception", async() => {
     const exceptReq = Object.assign({}, mockReq, { vars : { noPush : true, noPullRequest : true } })
-    const handler = addHandler.func({ reporter })
+    const handler = addHandler.func({ app: appMock, reporter: reporterMock })
     try {
       await handler(exceptReq, mockRes)
       fail('failed to throw')
@@ -59,7 +60,7 @@ describe('PUT:/projects/workflows/github/node-jest-cicd/add', () => {
 
   test("lack of a 'X-CWD' header results in an exception", async() => {
     const exceptReq = Object.assign({}, mockReq, { get : () => undefined })
-    const handler = addHandler.func({ reporter })
+    const handler = addHandler.func({ app: appMock, reporter: reporterMock })
     try {
       await handler(exceptReq, mockRes)
       fail('failed to throw')

@@ -1,8 +1,8 @@
 {
-  "name": "@liquid-labs/catalyst-projects-workflow-github-jest-cicd",
+  "name": "@liquid-labs/sdlc-projects-workflow-github-cicd",
   "version": "1.0.0-alpha.1",
-  "description": "A catalyst plugin for GitHub Workflows CI/CD unit testing.",
-  "main": "dist/catalyst-projects-workflow-github-jest-cicd.js",
+  "description": "A plugable-express plugin for GitHub Workflows CI/CD unit testing for node and jest.",
+  "main": "dist/sdlc-projects-workflow-github-cicd.js",
   "files": [
     "dist/"
   ],
@@ -22,24 +22,31 @@
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",
   "repository": {
-    "url": "git+ssh://git@github.com/liquid-labs/catalyst-projects-workflow-github-jest-cicd.git",
+    "url": "git+ssh://git@github.com/liquid-labs/sdlc-projects-workflow-github-cicd.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/liquid-labs/catalyst-projects-workflow-github-jest-cicd/issues"
+    "url": "https://github.com/liquid-labs/sdlc-projects-workflow-github-cicd/issues"
   },
-  "homepage": "https://github.com/liquid-labs/catalyst-projects-workflow-github-jest-cicd#readme",
+  "homepage": "https://github.com/liquid-labs/sdlc-projects-workflow-github-cicd#readme",
   "devDependencies": {
-    "@liquid-labs/catalyst-resource-babel-and-rollup": "^1.0.0-alpha.3",
-    "@liquid-labs/catalyst-resource-eslint": "^1.0.0-alpha.1",
-    "@liquid-labs/catalyst-resource-jest": "^1.0.0-alpha.4",
-    "@liquid-labs/catalyst-server": "file:.yalc/@liquid-labs/catalyst-server"
+    "@liquid-labs/sdlc-resource-babel-and-rollup": "^1.0.0-alpha.5",
+    "@liquid-labs/sdlc-resource-eslint": "^1.0.0-alpha.2",
+    "@liquid-labs/sdlc-resource-jest": "^1.0.0-alpha.5",
+    "js-yaml": "^4.1.0"
   },
   "dependencies": {
-    "@liquid-labs/catalyst-lib-build": "^1.0.0-alpha.6",
-    "@liquid-labs/git-toolkit": "^1.0.0-alpha.15",
+    "@liquid-labs/git-toolkit": "^1.0.0-alpha.16",
     "@liquid-labs/http-smart-response": "^1.0.0-alpha.3",
     "@liquid-labs/npm-toolkit": "^1.0.0-alpha.10",
+    "@liquid-labs/sdlc-lib-build": "^1.0.0-alpha.16",
     "http-errors": "^2.0.0"
+  },
+  "_npm-check-plus": {
+    "depcheck": {
+      "ignoreMatches": [
+        "@liquid-labs/sdlc-resource-*"
+      ]
+    }
   }
 }

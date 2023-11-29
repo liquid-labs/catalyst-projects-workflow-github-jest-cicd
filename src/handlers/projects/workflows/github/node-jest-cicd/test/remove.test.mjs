@@ -5,14 +5,12 @@ import * as fsPath from 'node:path'
 
 import yaml from 'js-yaml'
 
-import { Reporter } from '@liquid-labs/catalyst-server'
-
 import * as removeHandler from '../remove'
 
 const testPkgPath = fsPath.join(__dirname, 'data', 'pkgC')
 
 describe('PUT:/projects/workflows/github/node-jest-cicd/remove', () => {
-  const reporter = new Reporter({ silent : true })
+  const reporterMock = { isolate: () => {}, log: () => {}, push : () => {} }
 
   const mockReq = {
     accepts : () => 'application/json',
@@ -27,7 +25,7 @@ describe('PUT:/projects/workflows/github/node-jest-cicd/remove', () => {
   }
 
   beforeAll(async() => {
-    const handler = removeHandler.func({ reporter })
+    const handler = removeHandler.func({ reporter: reporterMock })
     await handler(mockReq, mockRes)
   })
 
@@ -36,15 +34,15 @@ describe('PUT:/projects/workflows/github/node-jest-cicd/remove', () => {
     expect(existsSync(scriptPath)).toBe(false)
   })
 
-  test('updates .catalyst-data.yaml', async() => {
-    const catalystDataPath = fsPath.join(testPkgPath, '.catalyst-data.yaml')
-    const catalystData = yaml.load(await fs.readFile(catalystDataPath, { encoding : 'utf8' }))
-    expect(catalystData.workflows?.github?.['node-unit-test']).toBe(undefined)
+  test('updates .sdlc-data.yaml', async() => {
+    const sdlcDataPath = fsPath.join(testPkgPath, '.sdlc-data.yaml')
+    const sdlcData = yaml.load(await fs.readFile(sdlcDataPath, { encoding : 'utf8' }))
+    expect(sdlcData.workflows?.github?.['node-unit-test']).toBe(undefined)
   })
 
   test("lack of a 'X-CWD' header results in an exception", async() => {
     const exceptReq = Object.assign({}, mockReq, { get : () => undefined })
-    const handler = removeHandler.func({ reporter })
+    const handler = removeHandler.func({ reporter: reporterMock })
     try {
       await handler(exceptReq, mockRes)
       fail('failed to throw')
